@@ -233,7 +233,7 @@ if __name__ == "__main__":
             sigma_e2 = np.std(np.array(block_tot['e2'][selection_mask]))
 
             print ('std e1 = {0}, std e2 = {1}'.format(sigma_e1, sigma_e2))
-            np.savez('./output_files/test_map_' + str(zmin) + '_' + str(zmax) + '_info.npz',
+            np.savez('./output_files/'+name_output+'_' + str(zmin) + '_' + str(zmax) + '_info.npz',
                      ngal=len(Z), e1_std=sigma_e1, e2_std=sigma_e2, mean_z=mean_z, area=area)
 
             names = ['kE', 'kB', 'Nsource', 'E1', 'E2']
