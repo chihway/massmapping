@@ -30,19 +30,22 @@ if __name__ == "__main__":
         files from Erin (testbeds) can be found here : https://cdcvs.fnal.gov/redmine/projects/deswlwg/wiki/MetacalibrationY3Testbed
     
         MOF appears to have been run on all y3_gold_1_0. Apply footprint_flag afterwards.
+        
+        star galaxy sep criteria: gal_size (SIZE)/psf_size(MCAL_PSF_SIZE) > 0.5 
     '''
 
     # input *************************************************************
 
-    folder_Y3_gold = './Y3_GOLD/'
-    Erin_file = 'y3v02-mcal-t003b-combined-blind-v1.fits'
-    output_file = './MOF_matched_Y3_t003b-combined-blind-v1.csv'
+    folder_Y3_gold = './input_files/Y3_GOLD/'
+    Erin_file = './input_files/y3v02-mcal-001-0-combined-blind-v1.fits'
+    output_file = './input_files/MOF_matched_Y3_001-0--combined-blind-v1.csv'
     index = 'COADD_OBJECT_ID'
     index_erin = 'coadd_objects_id'
 
     Erin_columns = ['e1', 'e2', 'e1_1p', 'e1_2p', 'e2_1p', 'e2_2p',
                     'e1_1m', 'e1_2m', 'e2_1m', 'e2_2m', 'R11', 'R12', 'R21', 'R22',
-                    'mask_frac', 'flags', 'mcal_psf_size', 'size', 'snr']
+                    'mask_frac', 'flags', 'mcal_psf_size', 'size', 'snr', 'size_1p',
+                    'size_1m', 'size_2p', 'size_2m', 'snr_1p', 'snr_2p', 'snr_1m', 'snr_2m']
 
     columns_gold = ['RA', 'DEC', 'BPZ_Z_MEAN', 'BPZ_Z_MC', 'FLAG_GOLD', 'FLAG_FOREGROUND', 'FLAG_FOOTPRINT']
 
